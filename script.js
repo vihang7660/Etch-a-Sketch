@@ -25,3 +25,14 @@ for (let i = 0; i < rows; i++) {
 
 container.style.display = 'flex'
 container.style.justifyContent = 'center'
+
+function hover(e) {
+    e.currentTarget.style.backgroundColor = 'green'
+}
+
+let box = document.querySelectorAll('.child')
+let boxes = Array.from(box)
+
+for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener('mouseover', hover)
+}
